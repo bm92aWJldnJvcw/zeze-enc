@@ -56,10 +56,10 @@ async def bin(bin1):
     price = bin1
     if not price.isdigit():
         raise HTTPException(
-            status_code=404, detail="Give me 6 digits Numbers.")
+            status_code=404, detail="Give me 6 digit numbers.")
     elif len(price) < 6:
         raise HTTPException(
-            status_code=404, detail="Give me 6 numbers atleast.")
+            status_code=404, detail="Give me 6 number atleast.")
     bin = price[:6]
     bin_data = get_bin_info(bin)
     if not bin_data:
@@ -79,7 +79,7 @@ async def bin(bin1):
 
 @app.get("/")
 async def start():
-    return RedirectResponse("http://www.github.com/r0ld3x/adyen-enc-and-bin-info")
+    return RedirectResponse("https://github.com/bm92aWJldnJvcw/zeze-enc")
 
 
 class Item(BaseModel):
